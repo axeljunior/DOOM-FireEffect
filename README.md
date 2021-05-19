@@ -4,14 +4,14 @@
 
 <p align="center">
 
-  <img alt="Repository size" src="https://img.shields.io/github/repo-size/axeljunior/Snake-game">
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/axeljunior/DOOM-FireEffect">
   
   <a href="https://github.com/axeljunior/Snake-game/commits/master">
-    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/axeljunior/Snake-game">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/axeljunior/DOOM-FireEffect">
   </a>
  
    <a href="https://github.com/axeljunior/Snake-game">
-    <img alt="Stargazers" src="https://img.shields.io/github/stars/axeljunior/Snake-game?style=social">
+    <img alt="Stargazers" src="https://img.shields.io/github/stars/axeljunior/DOOM-FireEffect?style=social">
   </a>
  
 </p>
