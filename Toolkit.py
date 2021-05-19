@@ -1,7 +1,7 @@
 import pygame, os
 
 class Responsivity(object):
-    __widthScreen = 400 #Largura
+    __widthScreen = 600 #Largura
     __heightScreen = 720 #Altura
     __rectangle_scale = 5
     @classmethod

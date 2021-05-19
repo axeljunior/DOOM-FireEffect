@@ -12,7 +12,7 @@ def run():
     TELA = pygame.display.set_mode((Responsivity.width_screen(), Responsivity.height_screen()))
     pygame.display.set_caption("Simulation")
 
-    effect = FireEffect(initPosition=700,altura=140,largura=79)
+    effect = FireEffect(initPosition=700,height=140,width=80)
     effect.fire_intensity(36)
 
     while True:
