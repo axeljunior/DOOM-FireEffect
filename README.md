@@ -17,7 +17,7 @@
 </p>
 
 <h2 id="Sobre">🔖 Sobre</h2>
-<p align="center">Esse foi o projeto de conclusão da disciplina de Python na faculdade que, após o termino, decidi continuar trabalhando no código com o objetivo de praticar algumas padrões da linguagem, boas praticas e a própria pygame</p>
+<p align="center">Algoritimo de fogo do DOOM implementado em python utilizando pygame para renderização.</p>
 
 <h2 id="Demonstrac-oes">📽 Demonstração</h2>
 <p align="center">
@@ -33,8 +33,6 @@
     <img width="250" style="border-radius: 5px" height="450" src="https://github.com/axeljunior/DOOM-FireEffect/blob/main/github%20assets/stage%203.gif">
   </kbd>
 </p>
-<p align="center">Caso queira experimentar o jogo, basta baixar o arquivo "Snake Game.exe" na pasta "Game" do repositorio.</p>
-<p> ‼️ OBS: Seu antvirus pode apitar por estar baixando um .exe dessa forma, mas garanto que é seguro!! Outra forma de testar é tendo o python e o pygame instalados na máquina e rodando o código.</p>
 
 <h2 id="autor">👾 Autor</h2>
 
