@@ -33,7 +33,7 @@ class Block(pygame.sprite.Sprite):
 
 class Text(object):
     @staticmethod
-    def draw_text(screen,text, color, surface,size=20,filefont='arial.ttf'):
+    def draw_text(screen, text, color, surface, size=20, filefont='arial.ttf'):
         fontobj = pygame.font.Font(os.path.join('assets/fonts',filefont), size)
 
         if filefont != 'arial.ttf':
@@ -59,27 +59,41 @@ class Collors(object):
                 'anil' : (10,60,120),
                 'violet' : (180,40,250)}
         return collor.get(collorName)
-
+    
     @staticmethod
-    def change_collor(tam,cor,num=0):
-        if tam <= 3:
-            return Collors.collor(cor)
-        else:
-            r,g,b = Collors.collor(cor)
+    def change_collor(intensity,cor):
+        r,g,b = cor
+        
+        if r <= 255:
+            r += intensity*2
+        if g <= 255:
+            g += intensity*2
+        if b <= 255:
+            b += intensity*2
 
-            num = 5*tam
+        # print((r,g,b))
+        return (r,g,b)
 
-            if num >= 250:
-                num = 250
+    # @staticmethod
+    # def change_collor(tam,cor,num=0):
+    #     if tam <= 3:
+    #         return Collors.collor(cor)
+    #     else:
+    #         r,g,b = Collors.collor(cor)
 
-            if num > r and num <= 250:
-                r = num
-            if num > g and num <= 250:
-                g = num
-            if num > b and num <= 250:
-                b = num
+    #         num = 5*tam
 
-            return (r,g,b)
+    #         if num >= 250:
+    #             num = 250
+
+    #         if num > r and num <= 250:
+    #             r = num
+    #         if num > g and num <= 250:
+    #             g = num
+    #         if num > b and num <= 250:
+    #             b = num
+
+    #         return (r,g,b)
 
 class ArtResource(object):
     __sfxLibrary={}
@@ -105,4 +119,18 @@ class ArtResource(object):
         pygame.mixer.music.play(-1)
 
 if __name__ == '__main__':
+    def change_collor(intensity,cor):
+        r,g,b = cor
+        
+        if r <= 255 and intensity < 9:
+            r += intensity*2
+        if g <= 255 and intensity < 9:
+            g += intensity*2
+        if b <= 255 and intensity < 9:
+            b += intensity*2
+        # print((r,g,b))
+        return (r,g,b)
+    
+    for n in list(range(36)):
+        print(change_collor(n,(250,160,0)))
     pass

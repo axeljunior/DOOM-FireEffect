@@ -13,7 +13,7 @@ def run():
     pygame.display.set_caption("Simulation")
 
     effect = FireEffect(initPosition=700,height=140,width=80)
-    effect.fire_intensity(36)
+    effect.fire_intensity(intensity=36)
 
     while True:
         TELA.fill((0,0,0))
@@ -31,7 +31,10 @@ def run():
                     effect.wind_intensity(direction='Right')
                 if event.key == K_a:
                     effect.wind_intensity(direction='Left')
-
+                if event.key == K_1: #Turn on
+                    effect.fire_intensity(intensity=1,i=0)
+                if event.key == K_2: #Turn off
+                    effect.fire_intensity(intensity=36,i=0)
         pygame.display.flip()
 
 run()
