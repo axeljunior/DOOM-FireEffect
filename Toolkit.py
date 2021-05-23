@@ -33,11 +33,12 @@ class Block(pygame.sprite.Sprite):
 
 class Text(object):
     @staticmethod
-    def draw_text(screen, text, color, surface, size=20, filefont='arial.ttf'):
-        fontobj = pygame.font.Font(os.path.join('assets/fonts',filefont), size)
+    def draw_text(screen, text, color, surface, size=20, bold=False, italic=False, filefont='arial', loadfile=False):
 
-        if filefont != 'arial.ttf':
-            fontobj = pygame.font.Font(os.path.join('assets/fonts',filefont), size)
+        if loadfile == True:
+            fontobj = pygame.font.Font(os.path.join('assets/fonts',filefont), size) 
+        else:
+            fontobj = pygame.font.SysFont(filefont, size, bold=bold, italic=italic)
 
         textobj = fontobj.render(text, 1, color)
         textrect = textobj.get_rect()
@@ -117,6 +118,19 @@ class ArtResource(object):
     @staticmethod
     def sound_play_bgm():
         pygame.mixer.music.play(-1)
+
+class Menu(object):
+    __buttons = {}
+    
+    @classmethod
+    def create_button(cls,nome=str,position=tuple,area=tuple):
+        cls.__buttons[nome] = pygame.Rect(position,area)
+    @classmethod
+    def button(cls,buttonName):
+        return cls.__buttons.get(buttonName)
+    @classmethod
+    def all_buttons(cls):
+        return cls.__buttons.keys()
 
 if __name__ == '__main__':
     def change_collor(intensity,cor):
