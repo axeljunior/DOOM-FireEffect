@@ -75,6 +75,50 @@ class Collors(object):
         # print((r,g,b))
         return (r,g,b)
 
+    @staticmethod
+    def interpole_collor(
+        delta,
+        inicio,
+        fim,
+        *args
+    ):
+        parts = [inicio, fim, *args]
+        if (delta <= 0): 
+            return parts[0]
+        value = int((len(parts) - 1) * delta)
+        inc = len(parts) / (len(parts) - 1)
+        modDelta = ((delta * len(parts)) % inc) / inc
+        if (value >= len(parts) - 1):
+            return parts[len(parts) - 1]
+        try:
+            l = list(map(lambda part: isinstance(part, list), parts))
+            index = l.index(True)
+        except:
+            return (
+            ((parts[value + 1]) - (parts[value])) * modDelta +
+            (parts[value])
+            )
+        length = len(parts[index])
+        for i in range(len(parts)):
+            if isinstance(parts[i], list) and len(parts[i]) != length:
+                raise Exception('Argumentos com tamanhos diferentes!')
+            
+        
+        resultado = []
+        # for (i = 0 i < (parts[index]).length i++):
+        for i in range(len(parts[index])):
+            if (isinstance(parts[value], list)): 
+                x = (parts[value])[i]
+            else:
+                x = (parts[value])
+            if isinstance(parts[value + 1], list):
+                y = (parts[value + 1])[i]
+            else:
+                y = (parts[value + 1])
+            resultado.append((y - x) * modDelta + x)
+        
+        return resultado
+
     # @staticmethod
     # def change_collor(tam,cor,num=0):
     #     if tam <= 3:
