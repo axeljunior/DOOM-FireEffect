@@ -74,7 +74,15 @@ class Collors(object):
 
         # print((r,g,b))
         return (r,g,b)
-
+        # /**
+        # * Interpola valores baseados em um delta.
+        # * @example interpolar(0.75, 0, [100, -100], 0) -> [-50, 50]
+        # * @param {number} delta Valor no intervalo [0, 1] que representa o percentual da interpolação.
+        # * @param {number|number[]} inicio Valor(es) que representa(m) o inicio da interpolação.
+        # * @param {number|number[]} fim Valor(es) que representa(m) o final ou o próximo ponto da interpolação.
+        # * @param  {...number} args Valor(es) que representa(m) os pontos da interpolação.
+        # */
+    
     @staticmethod
     def interpole_collor(
         delta,
@@ -82,6 +90,34 @@ class Collors(object):
         fim,
         *args
     ):
+        """Interpola valores baseados em um delta.
+
+        Paramêtros:
+            delta
+                Tipo: númerico
+                descrição: Valor no intervalo [0, 1] que representa o percentual da interpolação.
+            inicio
+                tipo: númerico ou lista númerica
+                descrição: Valor(es) que representa(m) o inicio da interpolação.
+            fim
+                tipo: númerico ou lista númerica
+                descrição: Valor(es) que representa(m) o final ou o próximo ponto da interpolação.
+            args
+                tipo: lista de (númerico ou lista númerica)
+                descrição: Valor(es) que representa(m) os pontos da interpolação.
+        
+        Retorno:
+            tipo: número ou lista númerica
+
+        Exemplos:
+            interpolar(0.5, 0, 200) -> [100]
+            interpolar(0.75, 0, 200) -> [150]
+            interpolar(0.5, 0, 200, 100, 0) -> [50]
+            interpolar(0.75, 0, [100, -100], 0) -> [50, -50]
+            interpolar(0.5, [255, 255, 255], [0, 0, 0]) -> [127.5, 127.5, 127.5]
+            interpolar(0.5, [255, 255, 255], [0, 0, 0], [-100, 0, 100], [50, 0, 0]) -> [-50, 0, 50]
+
+        """
         parts = [inicio, fim, *args]
         if (delta <= 0): 
             return parts[0]
