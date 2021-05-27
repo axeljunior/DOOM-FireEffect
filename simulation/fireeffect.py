@@ -16,6 +16,7 @@ class FireEffect(object):
         self.area = ( self.pixel, self.pixel )
         self.initPosition = initPosition
         self.canvasSize = height
+        self.pallet = firePallet
         self.wind = 0
         self.canvas = {}
 
@@ -61,7 +62,7 @@ class FireEffect(object):
     def fire_render(self,surface,layer=0):
         for coord in self.canvas[layer].keys():
             intensity = self.canvas[layer].get(coord)[1]
-            pygame.draw.rect(surface, firePallet.get(intensity), self.canvas[layer].get(coord)[0].rect)
+            pygame.draw.rect(surface, self.pallet.get(intensity), self.canvas[layer].get(coord)[0].rect)
             # pygame.draw.rect(surface, Collors.change_collor(intensity=intensity,cor=Collors.collor('orange')), self.canvas[layer].get(coord)[0].rect)
             
         if layer < self.canvasSize - 2:
@@ -71,6 +72,9 @@ class FireEffect(object):
     def fire_intensity(self,intensity,i=0):
         for coord in self.canvas[i].keys():
             self.canvas[i].get(coord)[1] = intensity
+    
+    def change_fire_collor(self,collor):
+        self.pallet = Collors.pallet_generator(cor=collor)
 
     def wind_intensity(self,direction):
         if direction == 'Right':

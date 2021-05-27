@@ -47,28 +47,28 @@ class Text(object):
 
 class Collors(object):
     @staticmethod
-    def collor(collorName):
+    def collor(collorName=None,getcollor=True):
         collor={        
-                'white' : (255,255,255),
-                'black' : (0,0,0),
-                'gray' : (50,50,50),
-                'red' : (250,0,0),
-                'orange' : (250,160,0),
-                'yellow' : (250,230,40),
-                'green' : (0,250,50),
-                'blue' : (0,50,250),
-                'anil' : (10,60,120),
-                'violet' : (180,40,250)}
-        return collor.get(collorName)
+                'blue' : (0,50,250),    'red' : (250,0,0),    'yellow' : (250,230,40),
+                'anil' : (10,60,120),   'green' : (0,250,50), 'orange' : (250,160,0),
+                'violet' : (180,40,250),'gray' : (50,50,50),  'white' : (255,255,255),
+                'black' : (0,0,0)}
+        if getcollor:
+            return collor.get(collorName)
+        else:
+            return collor
     
-    # /**
-    # * Interpola valores baseados em um delta.
-    # * @example interpolar(0.75, 0, [100, -100], 0) -> [-50, 50]
-    # * @param {number} delta Valor no intervalo [0, 1] que representa o percentual da interpolação.
-    # * @param {number|number[]} inicio Valor(es) que representa(m) o inicio da interpolação.
-    # * @param {number|number[]} fim Valor(es) que representa(m) o final ou o próximo ponto da interpolação.
-    # * @param  {...number} args Valor(es) que representa(m) os pontos da interpolação.
-    # */
+    @staticmethod
+    def pallet_generator(cor, numero_de_partes = 36, partes = []):
+
+        for i in range(numero_de_partes+1):
+            partes.append(Collors.interpole_collor(i / numero_de_partes, [255, 255, 255], list(cor), [0, 0, 0]))
+        
+        partes = list(map(lambda item: list(map(lambda x: int(x), item)), partes))
+        partes = { key : tuple(value) for key,value in enumerate(partes[::-1],0)}
+
+        return partes
+   
     @staticmethod
     def interpole_collor(delta,inicio,fim,*args):
         """Interpola valores baseados em um delta.
@@ -172,18 +172,8 @@ class Menu(object):
         return cls.__buttons.keys()
 
 if __name__ == '__main__':
-    def change_collor(intensity,cor):
-        r,g,b = cor
-        
-        if r <= 255 and intensity < 9:
-            r += intensity*2
-        if g <= 255 and intensity < 9:
-            g += intensity*2
-        if b <= 255 and intensity < 9:
-            b += intensity*2
-        # print((r,g,b))
-        return (r,g,b)
-    
-    for n in list(range(36)):
-        print(change_collor(n,(250,160,0)))
+
+    # Collors.pallet_generator()
+    for n in range(8):
+        print(n)
     pass
