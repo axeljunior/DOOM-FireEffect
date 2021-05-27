@@ -1,7 +1,7 @@
 import pygame,random
 from pygame.locals import *
 
-from Toolkit import *
+from simulation.toolkit import *
 
 firePallet = {   0 : (0,0,0),        1 : (7,7,7),      2 : (47,15,7),     3 : (71,15,7),     4 : (87,23,7),     5 : (103,31,7),    6 : (119,31,7), 
                  7 : (143,39,7),     8 : (159,47,7),    9 : (175,63,7),   10 : (191,71,7),   11 : (199,71,7),   12 : (223,79,7),    13 : (223,87,7),

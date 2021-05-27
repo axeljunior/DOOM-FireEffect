@@ -61,35 +61,16 @@ class Collors(object):
                 'violet' : (180,40,250)}
         return collor.get(collorName)
     
+    # /**
+    # * Interpola valores baseados em um delta.
+    # * @example interpolar(0.75, 0, [100, -100], 0) -> [-50, 50]
+    # * @param {number} delta Valor no intervalo [0, 1] que representa o percentual da interpolação.
+    # * @param {number|number[]} inicio Valor(es) que representa(m) o inicio da interpolação.
+    # * @param {number|number[]} fim Valor(es) que representa(m) o final ou o próximo ponto da interpolação.
+    # * @param  {...number} args Valor(es) que representa(m) os pontos da interpolação.
+    # */
     @staticmethod
-    def change_collor(intensity,cor):
-        r,g,b = cor
-        
-        if r <= 255:
-            r += intensity*2
-        if g <= 255:
-            g += intensity*2
-        if b <= 255:
-            b += intensity*2
-
-        # print((r,g,b))
-        return (r,g,b)
-        # /**
-        # * Interpola valores baseados em um delta.
-        # * @example interpolar(0.75, 0, [100, -100], 0) -> [-50, 50]
-        # * @param {number} delta Valor no intervalo [0, 1] que representa o percentual da interpolação.
-        # * @param {number|number[]} inicio Valor(es) que representa(m) o inicio da interpolação.
-        # * @param {number|number[]} fim Valor(es) que representa(m) o final ou o próximo ponto da interpolação.
-        # * @param  {...number} args Valor(es) que representa(m) os pontos da interpolação.
-        # */
-    
-    @staticmethod
-    def interpole_collor(
-        delta,
-        inicio,
-        fim,
-        *args
-    ):
+    def interpole_collor(delta,inicio,fim,*args):
         """Interpola valores baseados em um delta.
 
         Paramêtros:
@@ -139,7 +120,6 @@ class Collors(object):
             if isinstance(parts[i], list) and len(parts[i]) != length:
                 raise Exception('Argumentos com tamanhos diferentes!')
             
-        
         resultado = []
         # for (i = 0 i < (parts[index]).length i++):
         for i in range(len(parts[index])):
@@ -154,27 +134,6 @@ class Collors(object):
             resultado.append((y - x) * modDelta + x)
         
         return resultado
-
-    # @staticmethod
-    # def change_collor(tam,cor,num=0):
-    #     if tam <= 3:
-    #         return Collors.collor(cor)
-    #     else:
-    #         r,g,b = Collors.collor(cor)
-
-    #         num = 5*tam
-
-    #         if num >= 250:
-    #             num = 250
-
-    #         if num > r and num <= 250:
-    #             r = num
-    #         if num > g and num <= 250:
-    #             g = num
-    #         if num > b and num <= 250:
-    #             b = num
-
-    #         return (r,g,b)
 
 class ArtResource(object):
     __sfxLibrary={}

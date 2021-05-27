@@ -1,8 +1,8 @@
 import pygame
 from pygame.locals import *
 
-from FireEffect import *
-from Toolkit import *
+from simulation.fireeffect import *
+from simulation.toolkit import *
 
 def run_menu(screen):
     button_1 = pygame.draw.rect(screen, (230,230,230), Menu.button('b_start'), border_radius=100)
@@ -25,7 +25,7 @@ def run():
 
     while True:
         TELA.fill((0,0,0))
-        timer.tick(10)
+        timer.tick(24)
 
         Text.draw_text(TELA,'FIRE',Collors.collor('orange'),(465,100),filefont='verdana',size=50)
         Text.draw_text(TELA,'EFFECT',Collors.collor('orange'),(501,140),filefont='verdana',size=50)
