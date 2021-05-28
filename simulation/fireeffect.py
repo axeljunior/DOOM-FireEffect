@@ -73,8 +73,12 @@ class FireEffect(object):
         for coord in self.canvas[i].keys():
             self.canvas[i].get(coord)[1] = intensity
     
-    def change_fire_collor(self,collor):
-        self.pallet = Collors.pallet_generator(cor=collor)
+    def change_fire_collor(self,collor,default=None):
+        if isinstance(default,type(None)):
+            self.pallet = Collors.pallet_generator(cor=collor)
+        else:
+            self.pallet = firePallet
+        
 
     def wind_intensity(self,direction):
         if direction == 'Right':

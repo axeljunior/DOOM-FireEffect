@@ -51,13 +51,13 @@ class Collors(object):
         collor={        
                 'blue' : (0,50,250),    'red' : (250,0,0),    'yellow' : (250,230,40),
                 'anil' : (10,60,120),   'green' : (0,250,50), 'orange' : (250,160,0),
-                'violet' : (180,40,250),'gray' : (50,50,50),  'white' : (255,255,255),
+                'violet' : (180,40,250),'gray' : (150,150,150),  'white' : (255,255,255),
                 'black' : (0,0,0)}
         if getcollor:
             return collor.get(collorName)
         else:
             return collor
-    
+
     @staticmethod
     def pallet_generator(cor, numero_de_partes = 36, partes = []):
 
@@ -68,7 +68,7 @@ class Collors(object):
         partes = { key : tuple(value) for key,value in enumerate(partes[::-1],0)}
 
         return partes
-   
+    
     @staticmethod
     def interpole_collor(delta,inicio,fim,*args):
         """Interpola valores baseados em um delta.
@@ -88,16 +88,7 @@ class Collors(object):
                 descrição: Valor(es) que representa(m) os pontos da interpolação.
         
         Retorno:
-            tipo: número ou lista númerica
-
-        Exemplos:
-            interpolar(0.5, 0, 200) -> [100]
-            interpolar(0.75, 0, 200) -> [150]
-            interpolar(0.5, 0, 200, 100, 0) -> [50]
-            interpolar(0.75, 0, [100, -100], 0) -> [50, -50]
-            interpolar(0.5, [255, 255, 255], [0, 0, 0]) -> [127.5, 127.5, 127.5]
-            interpolar(0.5, [255, 255, 255], [0, 0, 0], [-100, 0, 100], [50, 0, 0]) -> [-50, 0, 50]
-
+            tipo: None
         """
         parts = [inicio, fim, *args]
         if (delta <= 0): 
@@ -121,7 +112,6 @@ class Collors(object):
                 raise Exception('Argumentos com tamanhos diferentes!')
             
         resultado = []
-        # for (i = 0 i < (parts[index]).length i++):
         for i in range(len(parts[index])):
             if (isinstance(parts[value], list)): 
                 x = (parts[value])[i]
@@ -162,18 +152,92 @@ class Menu(object):
     __buttons = {}
     
     @classmethod
-    def create_button(cls,nome=str,position=tuple,area=tuple):
+    def create_button(cls,nome,position,area):
+        """Gera um botão no dicionario da classe.
+
+        Paramêtros:
+            nome
+                Tipo: String
+                Descrição: Valor que representa a chave do botão no dicionario.
+            Position
+                Tipo: Tupla(int,int)
+                Descrição: Tupla que representa a posição botão.
+            area
+                Tipo: Tupla(int,int)
+                Descrição: Tupla que representa a escala dos botões.
+        
+        Retorno:
+            Tipo: None
+        """
         cls.__buttons[nome] = pygame.Rect(position,area)
     @classmethod
+    def create_buttonList(cls,nome,number,initPosition,spacing,area,orientation='horizontal'):    
+        """Gera uma lista de botões no dicionario da classe.
+
+        Paramêtros:
+            nome
+                Tipo: String
+                Descrição: Valor que representa a chave da lista no dicionario.
+            number
+                Tipo: Inteiro
+                Descrição: Valor que representa a quantidade de botões na lista.
+            initPosition
+                Tipo: Tupla(int,int)
+                Descrição: Tupla que representa a posição inicial do primeiro botão na fila.
+            spacing
+                Tipo: Inteiro
+                Descrição: Valor que representa o espaçamento entre os botões na fila.
+            area
+                Tipo: Tupla(int,int)
+                Descrição: Tupla que representa a escala dos botões.
+            orientation
+                Tipo: String
+                Descrição: Valor que representa a orientação da fila, horizontal por padrão, mude para
+                vertical para ter uma coluna de botões.
+        
+        Retorno:
+            Tipo: None
+        """
+        buttonList = []
+        if orientation == 'horizontal':
+            positX = initPosition[0]
+            spacing = spacing + area[0]
+            for _ in range(0,number):
+                positX = positX + spacing
+                buttonList.append(pygame.Rect((positX,initPosition[1]),area))
+        elif orientation == 'vertical':
+            positY = initPosition[1]
+            spacing = spacing + area[1]
+            for _ in range(0,number):
+                positY = positY + spacing
+                buttonList.append(pygame.Rect((initPosition[0],positY),area))
+        else:
+            raise TypeError("Orientação invalida")
+        cls.__buttons[nome] = buttonList
+        
+    @classmethod
     def button(cls,buttonName):
+        """Retorna o Rect do botão especificado.
+
+        Paramêtros:
+            buttonName
+                Tipo: String
+                Descrição: Valor que representa a chave do botão no dicionario.
+        
+        Retorno:
+            Tipo: Rect
+        """        
         return cls.__buttons.get(buttonName)
     @classmethod
     def all_buttons(cls):
+        """Retorna uma lista com a Chave de todos os botões no dicionario.
+
+        Retorno:
+            Tipo: List
+        """    
         return cls.__buttons.keys()
 
-if __name__ == '__main__':
 
-    # Collors.pallet_generator()
-    for n in range(8):
-        print(n)
+if __name__ == '__main__':
+    print(Collors.collor(getcollor=False)[0])
     pass
