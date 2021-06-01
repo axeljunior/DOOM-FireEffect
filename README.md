@@ -34,11 +34,20 @@
   </kbd>
 </p>
 
+<h2 id="Contribuidores">🤝 Contribuidores</h2>
+<p> Um agradecimento 👏 para essa galera e para o Filipe Deschamps que inspirou este projeto.</p>
+
+<table>
+  <tr>
+    <td align="center"><a href="https://github.com/jordyfontoura"><img src="https://avatars.githubusercontent.com/u/52868800?v=4" width="90px;" alt=""/><br /><sub><b>Jordy Fontoura</b></sub></a><br /></td>
+  </tr>
+</table>
+
 <h2 id="autor">👾 Autor</h2>
 
 <img style="border-radius: 50%;" src="https://avatars.githubusercontent.com/u/57641489?v=4" width="100px;"/>
 
-Feito por Axél Junior 👋🏽 entre em contato!
+<p>Feito por Axél Junior 👋🏽 entre em contato!</p>
 
 [![Linkedin Badge](https://img.shields.io/badge/-Axel-júnior?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/axel-júnior/)](https://www.linkedin.com/in/axel-júnior/) 
 [![Gmail Badge](https://img.shields.io/badge/-alexandre_junior@id.uff.br-c14438?style=flat-square&logo=Gmail&logoColor=white&link=mailto:alexandre_junior@id.uff.br)](mailto:alexandre_junior@id.uff.br)
