@@ -17,7 +17,7 @@
 </p>
 
 <h2 id="Sobre">🔖 Sobre</h2>
-<p align="center">Algoritimo de fogo do DOOM implementado em python utilizando pygame para renderização.</p>
+<p align="center">Implementação em Python utilizando pygame para renderização do algorítimo de fogo do DOOM 🔥, com um sistema de mudança dinâmica da cor do efeito.</p>
 
 <h2 id="Demonstrac-oes">📽 Demonstração</h2>
 <p align="center">
@@ -35,7 +35,7 @@
 </p>
 
 <h2 id="Contribuidores">🤝 Contribuidores</h2>
-<p> Um agradecimento 👏 para essa galera e para o Filipe Deschamps que inspirou este projeto.</p>
+<p> Um agradecimento 👏🏽 para essa galera e para o Filipe Deschamps que inspirou este projeto.</p>
 
 <table>
   <tr>
