@@ -37,11 +37,9 @@
 <h2 id="Contribuidores">🤝 Contribuidores</h2>
 <p> Um agradecimento 👏🏽 para essa galera e para o Filipe Deschamps que inspirou este projeto.</p>
 
-<table>
   <tr>
     <td align="center"><a href="https://github.com/jordyfontoura"><img src="https://avatars.githubusercontent.com/u/52868800?v=4" width="90px;" alt=""/><br /><sub><b>Jordy Fontoura</b></sub></a><br /></td>
   </tr>
-</table>
 
 <h2 id="autor">👾 Autor</h2>
 
