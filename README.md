@@ -6,7 +6,7 @@
 
   <img alt="Repository size" src="https://img.shields.io/github/repo-size/axeljunior/DOOM-FireEffect">
   
-  <a href="https://github.com/axeljunior/Snake-game/commits/master">
+  <a href="https://github.com/axeljunior/DOOM-FireEffect/commits/master">
     <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/axeljunior/DOOM-FireEffect">
   </a>
  
@@ -20,19 +20,26 @@
 <p align="center">Implementação em Python utilizando pygame para renderização do algorítimo de fogo do DOOM 🔥, com um sistema de mudança dinâmica da cor do efeito.</p>
 
 <h2 id="Demonstrac-oes">📽 Demonstração</h2>
-<p align="center">
-  <kbd>
-    <img width="250" style="border-radius: 5px" height="450" src="https://github.com/axeljunior/DOOM-FireEffect/blob/main/github%20assets/stage%201.png">
-  </kbd>
 
+  <p align="center">
   <kbd>
-    <img width="250" style="border-radius: 5px" height="450" src="https://github.com/axeljunior/DOOM-FireEffect/blob/main/github%20assets/stage%202.gif">
+  <img width="250" style="border-radius: 5px" height="450" src="https://github.com/axeljunior/DOOM-FireEffect/blob/main/github%20assets/stage%201.png">
   </kbd>
+  </p>
 
-  <kbd>
-    <img width="250" style="border-radius: 5px" height="450" src="https://github.com/axeljunior/DOOM-FireEffect/blob/main/github%20assets/stage%203.gif">
-  </kbd>
-</p>
+### Menu e Controles
+ + O botão `START` inicia a simulação e o `STOP` finaliza 
+ + As teclas `A` e `D` podem ser usadas para alterar a direção do vento
+  <img width="150" style="border-radius: 5px" height="250" src="https://github.com/axeljunior/DOOM-FireEffect/blob/main/github%20assets/stage%201.png">
+  
+ + A fila de botões coloridos altera a cor do efeito para a cor referente
+  <img width="150" style="border-radius: 5px" height="250" src="https://github.com/axeljunior/DOOM-FireEffect/blob/main/github%20assets/stage%201.png">
+  
+ + O botão `RANDOM` altera a cor do efeito para uma cor aleatorio
+  <img width="150" style="border-radius: 5px" height="250" src="https://github.com/axeljunior/DOOM-FireEffect/blob/main/github%20assets/stage%201.png">
+  
+ + O botão `DEFAULT` retorna o efeito para a peleta padrão
+  <img width="150" style="border-radius: 5px" height="250" src="https://github.com/axeljunior/DOOM-FireEffect/blob/main/github%20assets/stage%201.png">
 
 <h2 id="Contribuidores">🤝 Contribuidores</h2>
 <p> Um agradecimento 👏🏽 para essa galera e para o Filipe Deschamps que inspirou este projeto.</p>
