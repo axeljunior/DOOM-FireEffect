@@ -23,23 +23,23 @@
 
   <p align="center">
   <kbd>
-  <img width="250" style="border-radius: 5px" height="450" src="https://github.com/axeljunior/DOOM-FireEffect/blob/main/github%20assets/stage%201.png">
+  <img width="400" style="border-radius: 5px" height="450" src="https://github.com/axeljunior/DOOM-FireEffect/blob/main/github%20assets/Menu.jpg">
   </kbd>
   </p>
 
 ### Menu e Controles
  + O botão `START` inicia a simulação e o `STOP` finaliza 
  + As teclas `A` e `D` podem ser usadas para alterar a direção do vento
-  <img width="150" style="border-radius: 5px" height="250" src="https://github.com/axeljunior/DOOM-FireEffect/blob/main/github%20assets/stage%201.png">
+  <img width="200" style="border-radius: 5px" height="250" src="https://github.com/axeljunior/DOOM-FireEffect/blob/main/github%20assets/Start.gif">
   
  + A fila de botões coloridos altera a cor do efeito para a cor referente
-  <img width="150" style="border-radius: 5px" height="250" src="https://github.com/axeljunior/DOOM-FireEffect/blob/main/github%20assets/stage%201.png">
+  <img width="200" style="border-radius: 5px" height="250" src="https://github.com/axeljunior/DOOM-FireEffect/blob/main/github%20assets/Collor Qeue.gif">
   
  + O botão `RANDOM` altera a cor do efeito para uma cor aleatorio
-  <img width="150" style="border-radius: 5px" height="250" src="https://github.com/axeljunior/DOOM-FireEffect/blob/main/github%20assets/stage%201.png">
+  <img width="200" style="border-radius: 5px" height="250" src="https://github.com/axeljunior/DOOM-FireEffect/blob/main/github%20assets/Random.gif">
   
  + O botão `DEFAULT` retorna o efeito para a peleta padrão
-  <img width="150" style="border-radius: 5px" height="250" src="https://github.com/axeljunior/DOOM-FireEffect/blob/main/github%20assets/stage%201.png">
+  <img width="200" style="border-radius: 5px" height="250" src="https://github.com/axeljunior/DOOM-FireEffect/blob/main/github%20assets/Default.gif">
 
 <h2 id="Contribuidores">🤝 Contribuidores</h2>
 <p> Um agradecimento 👏🏽 para essa galera e para o Filipe Deschamps que inspirou este projeto.</p>
