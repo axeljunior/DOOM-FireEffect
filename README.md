@@ -41,6 +41,15 @@
  + O botão `DEFAULT` retorna o efeito para a peleta padrão
   <img width="200" style="border-radius: 5px" height="250" src="https://github.com/axeljunior/DOOM-FireEffect/blob/main/github%20assets/Default.gif">
 
+
+<h2 id="Como Executar">⚙️ Como Executar</h2>
+
+### Requisitos
++ Python 3.9 ou superior
++ Pygame 2.0.1 ou superior
+
+Com as dependencias devidamente instaladas basta baixar o projeto e executar o arquivo `run.py`
+
 <h2 id="Contribuidores">🤝 Contribuidores</h2>
 <p> Um agradecimento 👏🏽 para essa galera e para o Filipe Deschamps que inspirou este projeto.</p>
 
